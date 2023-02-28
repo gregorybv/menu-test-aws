@@ -5,7 +5,6 @@ const root = document.querySelector("#app")
 const createMenuItems = (obj, rootDiv) => {
   obj.forEach((item) => {
 
-    // const itemNew = document.createElement('div');
     const itemBlock = document.createElement('div');
 
     const countNumber = document.createElement('div')
@@ -36,9 +35,6 @@ const createMenuItems = (obj, rootDiv) => {
 
     img.setAttribute('src', `https://smartapp.acs-cis.ru/assets/img/Menu/${item.url}`);
 
-    // buttonDel.setAttribute('data-direction', 'minus')
-    // buttonAdd.setAttribute('data-direction', 'plus')
-
     //присваиваем классы
 
     itemBlock.className = 'item-div';
@@ -68,16 +64,13 @@ const createMenuItems = (obj, rootDiv) => {
     labelWeight.appendChild(weight)
     itemBlock.appendChild(labelWeight)
 
-
     priceBlock.appendChild(buttonDel);
     priceBlock.appendChild(labelPrice);
     labelPrice.appendChild(price);
     priceBlock.appendChild(buttonAdd);
     itemBlock.appendChild(priceBlock)
-    // itemNew.appendChild(itemBlock);
     rootDiv.appendChild(itemBlock);
     root.appendChild(rootDiv)
-    // console.log(item)
   })
 }
 
@@ -102,7 +95,6 @@ menuCategories[0].forEach((element) => {
   root.appendChild(createMenuCategories(element))
 })
 
-
 // counter
 const counters = document.querySelectorAll(".item-div")
 
@@ -117,7 +109,6 @@ counters.forEach((counter) => {
     const numberValue = +number.innerText
     number.innerText = numberValue + 1
     calculation.innerText = number.innerText * calculatValue
-    // console.log(calculation.innerText)
   })
 
   minusBtn.addEventListener("click", () => {
